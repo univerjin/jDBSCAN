@@ -107,7 +107,7 @@
 				}
 				if (time_eps &&  (time_distance(data[i], d) <= time_eps) && distance(data[i], d) <= eps) {
 					neighbours.push(i);
-				} else if (distance(data[i], d) <= eps) {
+				} else if (!time_eps && distance(data[i], d) <= eps) {
 					neighbours.push(i);
 				}
 			}
